@@ -453,7 +453,7 @@ class PHPFileMonitor {
         $allowed_paths = $open_basedir ? explode(PATH_SEPARATOR, $open_basedir) : [];
         
         ?>
-        <!DOCTYPEhtml>
+        <!DOCTYPE html>
         <html lang="id">
         <head>
             <meta charset="UTF-8">
@@ -676,7 +676,8 @@ class PHPFileMonitor {
                             </label>
                             <input type="text" 
                                    id="directory" 
-                                   name="dir"value="<?php echo htmlspecialchars($defaultDir); ?>" 
+                                   name="dir" 
+                                   value="<?php echo htmlspecialchars($defaultDir); ?>" 
                                    placeholder="Contoh: /var/www/html atau /home/user/public_html"
                                    required>
                             <small style="color: #666; margin-top: 5px; display: block;">
@@ -829,7 +830,8 @@ class PHPFileMonitor {
                 .stat-label { color: #666; margin-top: 10px; }
                 
                 .control-panel { background: white; padding: 20px; border-radius: 10px; 
-                                margin-bottom: 25px; display: flex; gap: 15px;align-items: center; flex-wrap: wrap; }
+                                margin-bottom: 25px; display: flex; gap: 15px; 
+                                align-items: center; flex-wrap: wrap; }
                 .control-panel input, .control-panel select { padding: 10px; border: 1px solid #ddd; 
                                                              border-radius: 5px; }
                 .btn { padding: 10px 20px; border: none; border-radius: 5px; 
@@ -1088,7 +1090,8 @@ class PHPFileMonitor {
                                                 <?php endif; ?>
                                             </small>
                                             <?php if (!$file['file_exists']): ?>
-                                                <small style="color: #e74c3c; margin-top: 3px;"><i class="fas fa-exclamation-triangle"></i> File sudah dihapus
+                                                <small style="color: #e74c3c; margin-top: 3px;">
+                                                    <i class="fas fa-exclamation-triangle"></i> File sudah dihapus
                                                 </small>
                                             <?php endif; ?>
                                         </div>
@@ -1227,7 +1230,8 @@ class PHPFileMonitor {
                     // Auto remove after 5 seconds
                     setTimeout(() => {
                         const alertElement = document.getElementById(alertId);
-                        if (alertElement) {alertElement.remove();
+                        if (alertElement) {
+                            alertElement.remove();
                         }
                     }, 5000);
                 }
@@ -1371,7 +1375,9 @@ class PHPFileMonitor {
                                 updateSelection(); // Update bulk selection
                             } else {
                                 showAlert(result.message, 'danger');
-                            }closeModal('deleteModal');
+                            }
+                            
+                            closeModal('deleteModal');
                             hideLoading();
                         })
                         .catch(error => {
@@ -1529,7 +1535,9 @@ class PHPFileMonitor {
                 
                 function exportToCSV() {
                     const rows = [];
-                    const visibleRows = Array.from(document.querySelectorAll('#fileTableBody tr')).filter(row => row.style.display !== 'none');// Header
+                    const visibleRows = Array.from(document.querySelectorAll('#fileTableBody tr')).filter(row => row.style.display !== 'none');
+                    
+                    // Header
                     rows.push(['No', 'Path', 'Extension', 'Created', 'Size', 'Risk Level', 'URL', 'Status'].join(','));
                     
                     // Data
