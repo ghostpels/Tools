@@ -1,7 +1,7 @@
 # Tools
 This is some tools :)
 
-=================================================================================
+============================================================
 
 
 **Pecah.py**
@@ -16,7 +16,7 @@ Example :
 
 	 python pecah.py --input rs.php --zip rs2.zip --loader rs2.php --lines 5
 
-==================================================================================
+=============================================================
 
 
 **Shell_scanner/scan.php**
@@ -24,3 +24,18 @@ Example :
 Script ini untuk melihat file php, phtml, php5 etc dalam rentan waktu tertentu. lengkap dengan path
 
 note : Kekurangannya untuk deteksi low, medium, risk masih belom karena webshell masih dianggap low risk
+
+
+
+=============================================================
+
+
+**Brute/brute.py**
+
+script bruteforce -> pass.txt untuk kombinasi password, ngambil username dari user yang ada. 
+
+
+Example:
+
+	python3 brute.py -l domains.txt -p passwords.txt -o hasil.txt -t 10
+
