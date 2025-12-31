@@ -59,3 +59,9 @@ Mass / Bulk Target:
 Interactive Shell :
 
 	python3 exploit.py --shell-url (target with full shell url)
+
+==============================================================
+
+**WP-Lab.sh**
+
+Gunakan script ini untuk membuat lab wordpress, langsung running aja bisa kok.
